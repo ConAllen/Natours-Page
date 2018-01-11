@@ -8,23 +8,29 @@ Dark green: #28b485
 */
 
 
-* {
+*,
+*::after,
+*::before {
 
     margin: 0;
     padding:0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 
+}
+
+html {
+
+    font-size:62.5%;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color:#777;
-    padding:30px; /* very handy padding trick */
-
+    padding:3rem; /* very handy padding trick */
+    box-sizing: border-box; /* very handy trick */
 
 }
 
@@ -42,21 +48,21 @@ body {
 }
 
 
-.logo-box{
+.header__logo-box{
 
     position:absolute;
     top:40px;
-    left:40px;
+    left:4rem;
 
 
 }
 
-.logo {
+.header__logo {
 
-    height:30px;
+    height:3rem;
 }
 
-.text-box{
+.header__text-box{
                                     /* extremely handy code  */
     position:absolute;
     top:40%;
@@ -68,16 +74,16 @@ body {
     color:#fff;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom:60px;
+    margin-bottom:6rem ;
 
 }
 
-.heading-primary .heading-main{
+.heading-primary .heading-primary-main {
 
     display:block;
-    font-size:60px;
+    font-size:5.5rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem ;
 
     animation-name: moveInLeft;
     animation-duration: 1.5s;
@@ -90,12 +96,12 @@ body {
     */
 }
 
-.heading-primary .heading-sub {
+.heading-primary .heading-primary-sub {
 
     display:block;
-    font-size:20px;
+    font-size:1.9rem;
     font-weight: 700;
-    letter-spacing:  21.7px;
+    letter-spacing:  2rem;
 
     animation-name: moveInRight;
     animation-duration: 1.5s;
@@ -117,27 +123,29 @@ body {
 
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
 
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
+    font-size:1.6rem;
 
 
 }
 
 .btn:hover {
 
-    transform:translateY(-5px);
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.449);
+    transform:translateY(-.5rem);
+    box-shadow: 0px .5rem 2rem rgba(0, 0, 0, 0.449);
+
 }
 
 .btn:active {
-    transform:translateY(-1px);
+    transform:translateY(-.1rem);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -154,7 +162,7 @@ pseudo button
     display: inline-block;
     height:100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top:0;
     left:0;
@@ -163,7 +171,7 @@ pseudo button
 
 }
 
-.btn-white::after {
+.btn--white::after {
 
     background-color: #fff;
 }
@@ -175,7 +183,7 @@ pseudo button
 
 }
 
-.btn-animation {
+.btn--animation {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode:backwards; /* applies the annimation before it starts */
 
@@ -195,12 +203,12 @@ animations
     0% {
 
         opacity: 0;
-        transform: translateX(-100px)
+        transform: translateX(-10rem)
 
     }
 
     80% {
-        transform: translateX(10px)
+        transform: translateX(1rem)
 
     }
 
@@ -217,14 +225,14 @@ animations
     0% {
 
         opacity: 0;
-        transform: translateY(30px)
+        transform: translateY(3rem)
 
     }
 
     100% {
 
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0rem);
 
     }
 }
@@ -234,12 +242,12 @@ animations
     0% {
 
         opacity: 0;
-        transform: translateX(100px)
+        transform: translateX(10rem)
 
     }
 
     80% {
-        transform: translateX(-10px)
+        transform: translateX(-1rem)
 
     }
 
