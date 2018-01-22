@@ -10,6 +10,7 @@ Dark green: #28b485
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+@import "layout/grid";
 
 
 @import "base/animations";
@@ -19,9 +20,12 @@ Dark green: #28b485
 
 @import "components/button";
 
+
+
+
 @import "layout/header";
 
-
+@import "pages/home";
 
 
 
